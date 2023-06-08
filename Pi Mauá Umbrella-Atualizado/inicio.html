@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_inicio.css">
+    <title>Mauá Umbrella</title>
+</head>
+<body>
+    <body>
+    <!--Relógio-->
+    <div>
+        <div id="clockdate">
+            <div class="clockdate-wrapper">
+              <div id="clock"></div>
+              <div id="date"></div>
+            </div>
+          </div>
+    <!--Login-->
+    <section class="area-login">
+        <div class="login">
+            <div>
+                <img src="imagens/white_lock.png" alt="icone login">
+            </div>
+            <h1>Login</h1>
+            <form action="escolha.html">
+                <input type="text" name="Nome" placeholder="RA" autofocus>
+                <input type="password" name="senha" placeholder="sua senha">
+                <button type="submit">entrar</button> 
+            </form>
+        </div>
+    </section>
+    <!--Imagem-->
+    <div id="imagem">
+        <img src="imagens/Logo_Maua_Umbrella.png" alt="icone login">
+    </div>            
+    <!--Scripts-->
+    <script>function startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        ap = (hr < 12) ? "<span> </span>" : "<span> </span>";
+        hr = (hr == 0) ? 12 : hr;
+        hr = checkTime(hr);
+        min = checkTime(min);
+        document.getElementById("clock").innerHTML = hr + ":" + min + " " + ap;
+        
+        var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+        var days = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sábado', 'Domingo'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+        document.getElementById("date").innerHTML = date;
+        
+        var time = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    startTime();</script>
+</body>
+</html>

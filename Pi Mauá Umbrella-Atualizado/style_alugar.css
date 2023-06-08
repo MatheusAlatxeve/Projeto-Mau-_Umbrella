@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(47, 49, 125);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.area-login {
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 355px;
+    border-radius: 10px;
+    height: 320px;
+    padding: 35px;
+}
+
+.login form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.login img{
+    width: 65px;
+    height: auto;
+
+}
+p{
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+form [type="submit"]{
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    height: 35px;
+}
+
+#titulo{
+    color: white;
+}
+
+
+#imagem{
+    text-align: center;
+    margin-top: 10%;
+    height: 80%;
+}
+
+#botao_fora{
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#img_voltar{
+    height: 70px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
